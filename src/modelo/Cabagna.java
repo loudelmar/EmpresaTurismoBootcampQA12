@@ -1,15 +1,13 @@
 package modelo;
 
-public class Cabagna extends Hospederia{
+public abstract class Cabagna extends Hospederia{
     //Declaración
     private boolean chimenea;
 
     //Constructores
-    public Cabagna(int valorBaseNoche, int cantidadNoches, String tipoTemporada, DatosCliente datosCliente, int capacidad, boolean esFumador, boolean chimenea) {
-        super(valorBaseNoche, cantidadNoches, tipoTemporada, datosCliente, capacidad, esFumador);
+    public Cabagna(DatosCliente datosCliente, int valorBaseNoche, int cantidadNoches, String tipoTemporada, int capacidad, boolean esFumador, boolean conDesayuno, boolean chimenea) {
+        super(datosCliente, valorBaseNoche, cantidadNoches, tipoTemporada, capacidad, esFumador, conDesayuno);
         this.chimenea = chimenea;
-    }
-    public Cabagna() {
     }
 
     //Getters y Setters
@@ -18,5 +16,15 @@ public class Cabagna extends Hospederia{
     }
     public void setChimenea(boolean chimenea) {
         this.chimenea = chimenea;
+    }
+
+    //Método incrementaValorBase
+    @Override
+    public int incrementaValorBase(){
+        int incrementaValorBase = 0;
+        if (this.getCapacidad()>5){
+            incrementaValorBase = this.getValorBaseNoche() + 18/100;
+        }
+        return incrementaValorBase;
     }
 }

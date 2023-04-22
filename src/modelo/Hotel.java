@@ -2,22 +2,16 @@ package modelo;
 
 public class Hotel extends Hospederia {
 
-    //Declaración
-    private boolean conDesayuno;
-
     //Constructores
-    public Hotel(int valorBaseNoche, int cantidadNoches, String tipoTemporada, DatosCliente datosCliente, int capacidad, boolean esFumador, boolean conDesayuno) {
-        super(valorBaseNoche, cantidadNoches, tipoTemporada, datosCliente, capacidad, esFumador);
-        this.conDesayuno = conDesayuno;
-    }
-    public Hotel() {
+    public Hotel(DatosCliente datosCliente, int valorBaseNoche, int cantidadNoches, String tipoTemporada, int capacidad, boolean esFumador, boolean conDesayuno) {
+        super(datosCliente, valorBaseNoche, cantidadNoches, tipoTemporada, capacidad, esFumador, conDesayuno);
     }
 
-    //Getters y Setters
-    public boolean isConDesayuno() {
-        return conDesayuno;
+    //Método abstract incrementaValorBase
+    @Override
+    public int incrementaValorBase() {
+        int incrementaValorBase = 0;
+        return incrementaValorBase;
     }
-    public void setConDesayuno(boolean conDesayuno) {
-        this.conDesayuno = conDesayuno;
-    }
+
 }

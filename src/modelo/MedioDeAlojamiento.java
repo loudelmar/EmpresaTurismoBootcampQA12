@@ -1,6 +1,6 @@
 package modelo;
 
-public class MedioDeAlojamiento {
+public abstract class MedioDeAlojamiento {
 
     //Declaración
     private int valorBaseNoche;
@@ -44,11 +44,27 @@ public class MedioDeAlojamiento {
         this.datosCliente = datosCliente;
     }
 
-    //Metodo subtotal
+    //Método subtotal:
     public int subtotal() {
-        cantidadNoches = 3;
-        valorBaseNoche = 10000;
-        int subtotal = cantidadNoches * valorBaseNoche;
+        int subtotal = this.cantidadNoches * this.valorBaseNoche;
         return subtotal;
     }
+
+    //Método bonoDescuento
+    public int bonoDescuento(){
+        int bonoDescuento = 0;
+        if (this.tipoTemporada.equalsIgnoreCase("baja")){
+            //subtotal - 25%
+            bonoDescuento = Math.round(this.subtotal()*25/100);
+        } else if (this.tipoTemporada.equalsIgnoreCase("media")){
+            //subtotal - 12,5%
+            bonoDescuento = (int) Math.round(this.subtotal()*12.5/100);
+
+        }
+        return bonoDescuento;
+    }
+
+    //Métodos abstractos valorACancelar y adicional
+    public abstract int valorACancelar();
+    public abstract int adicional ();
 }

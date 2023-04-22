@@ -1,18 +1,18 @@
 package modelo;
 
-public class Hospederia extends MedioDeAlojamiento{
+public abstract class Hospederia extends MedioDeAlojamiento{
 
     //Declaración
     private int capacidad;
     private boolean esFumador;
+    private boolean conDesayuno;
 
     //Constructores
-    public Hospederia(DatosCliente datosCliente, int valorBaseNoche, int cantidadNoches, String tipoTemporada, int capacidad, boolean esFumador) {
+    public Hospederia(DatosCliente datosCliente, int valorBaseNoche, int cantidadNoches, String tipoTemporada, int capacidad, boolean esFumador, boolean conDesayuno) {
         super(valorBaseNoche, cantidadNoches, tipoTemporada, datosCliente);
         this.capacidad = capacidad;
         this.esFumador = esFumador;
-    }
-    public Hospederia() {
+        this.conDesayuno = conDesayuno;
     }
 
     //Getters y Setters
@@ -28,4 +28,30 @@ public class Hospederia extends MedioDeAlojamiento{
     public void setEsFumador(boolean esFumador) {
         this.esFumador = esFumador;
     }
+    public boolean isConDesayuno() {
+        return conDesayuno;
+    }
+    public void setConDesayuno(boolean conDesayuno) {
+        this.conDesayuno = conDesayuno;
+    }
+
+    //Métodos sobrecargados valorACancelar y adicional
+    @Override
+    public int valorACancelar() {
+        int valorACancelar = this.subtotal() - this.bonoDescuento() + this.adicional();
+        return valorACancelar;
+    }
+
+    @Override
+    public int adicional(){
+        int adicional = 0;
+        if (this.esFumador || this.conDesayuno){
+            //+30%
+            adicional = subtotal()*30/100;
+        }
+        return adicional;
+    }
+
+    //Método abstracto incrementaValorBase
+    public abstract int incrementaValorBase();
 }

@@ -20,4 +20,17 @@ public class Carpa extends MedioDeAlojamiento {
     public void setCantidadPersonas(int cantidadPersonas) {
         this.cantidadPersonas = cantidadPersonas;
     }
+
+    //Métodos sobrecargados valorACancelar y adicional
+    @Override
+    public int valorACancelar() {
+        int valorACancelar = this.subtotal() - this.bonoDescuento() + this.adicional();
+        return valorACancelar;
+    }
+
+    @Override
+    public int adicional() {
+        int adicional = 0;
+        return adicional;
+    }
 }
