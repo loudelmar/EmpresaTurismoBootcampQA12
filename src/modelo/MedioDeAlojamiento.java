@@ -6,14 +6,16 @@ public abstract class MedioDeAlojamiento {
     private int valorBaseNoche;
     private int cantidadNoches;
     private String tipoTemporada;
+    private String tipoMedioDeAlojamiento;
     private DatosCliente datosCliente;
 
     //Constructores
-    public MedioDeAlojamiento(int valorBaseNoche, int cantidadNoches, String tipoTemporada, DatosCliente datosCliente) {
+    public MedioDeAlojamiento(DatosCliente datosCliente, int valorBaseNoche, int cantidadNoches, String tipoTemporada, String tipoMedioDeAlojamiento) {
+        this.datosCliente = datosCliente;
         this.valorBaseNoche = valorBaseNoche;
         this.cantidadNoches = cantidadNoches;
         this.tipoTemporada = tipoTemporada;
-        this.datosCliente = datosCliente;
+        this.tipoMedioDeAlojamiento = tipoMedioDeAlojamiento;
     }
     public MedioDeAlojamiento() {
     }
@@ -31,9 +33,9 @@ public abstract class MedioDeAlojamiento {
     public void setCantidadNoches(int cantidadNoches) {
         this.cantidadNoches = cantidadNoches;
     }
-    public String getTipoTemporada() {
-        return tipoTemporada;
-    }
+    public String getTipoMedioDeAlojamiento() { return tipoMedioDeAlojamiento;}
+    public void setTipoMedioDeAlojamiento(String tipoMedioDeAlojamiento) { this.tipoMedioDeAlojamiento = tipoMedioDeAlojamiento;}
+    public String getTipoTemporada() { return tipoTemporada; }
     public void setTipoTemporada(String tipoTemporada) {
         this.tipoTemporada = tipoTemporada;
     }

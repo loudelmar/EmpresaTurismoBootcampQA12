@@ -1,12 +1,12 @@
 package modelo;
 
-public abstract class Cabagna extends Hospederia{
+public class Cabagna extends Hospederia{
     //Declaración
     private boolean chimenea;
 
     //Constructores
-    public Cabagna(DatosCliente datosCliente, int valorBaseNoche, int cantidadNoches, String tipoTemporada, int capacidad, boolean esFumador, boolean conDesayuno, boolean chimenea) {
-        super(datosCliente, valorBaseNoche, cantidadNoches, tipoTemporada, capacidad, esFumador, conDesayuno);
+    public Cabagna(DatosCliente datosCliente, int valorBaseNoche, int cantidadNoches, String tipoTemporada, String tipoMedioDeAlojamiento, int capacidad, boolean esFumador, boolean conDesayuno, boolean chimenea) {
+        super(datosCliente, valorBaseNoche, cantidadNoches, tipoTemporada, tipoMedioDeAlojamiento, capacidad, esFumador, conDesayuno);
         this.chimenea = chimenea;
     }
 

@@ -4,12 +4,12 @@ public class DatosCliente {
 
     //Declaración
     private String nombre;
-    private int rut;
+    private String rut;
 
     //Constructores
     public DatosCliente() {
     }
-    public DatosCliente(String nombre, int rut) {
+    public DatosCliente(String nombre, String rut) {
         this.nombre = nombre;
         this.rut = rut;
     }
@@ -22,8 +22,8 @@ public class DatosCliente {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public int getRut() { return rut; }
-    public void setRut(int rut) {
+    public String getRut() { return rut; }
+    public void setRut(String rut) {
         this.rut = rut;
     }
 }
