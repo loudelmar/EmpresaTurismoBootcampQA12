@@ -106,12 +106,8 @@ public class EmpresaTurismo {
     //Opción 4: Total Adicional.
     public int totalAdicional(){
         int totalAdicional = 0;
-        Hotel hotel = null;
         for (int i=0; i<empresaTurismo.size(); i++){
-            if (empresaTurismo.get(i) instanceof Hotel){
-                hotel = (Hotel) empresaTurismo.get(i);
-                totalAdicional = totalAdicional + hotel.adicional();
-            }
+                totalAdicional = totalAdicional + empresaTurismo.get(i).adicional();
         }
         return totalAdicional;
     }
@@ -129,14 +125,39 @@ public class EmpresaTurismo {
     public String cantidadMediosDeAlojamiento(){
         String mensaje = "";
         for (int i=0; i<empresaTurismo.size(); i++){
-            if (i>0){
+            if (i > 0) {
                 mensaje = "El total de los medios de alojamiento es: " + empresaTurismo.size();
+                break;
             }
-        } return mensaje;
+        }
+        return mensaje;
     }
 
     //Opción 7: Valor a cancelar por un cliente X.
+    public String valorACancelar (String rut){
+        int valorACancelar = 0;
+        for (int i=0; i<empresaTurismo.size(); i++){
+            if (empresaTurismo.get(i).getDatosCliente().getRut().compareToIgnoreCase(rut) == 0){
+                return "El valor a cancelar de " + empresaTurismo.get(i).getDatosCliente().getNombre() +
+                        " es de $" + empresaTurismo.get(i).valorACancelar();
+            }
+        } return "El cliente con ese rut no existe. Escriba otro rut...";
+    }
 
+    //Opción 8: Aplicar incremento del valor base.
+    public String incrementoValorBase(String rut){
+        Cabagna cabagna = null;
+        for (int i = 0; i < empresaTurismo.size(); i++) {
+            if (empresaTurismo.get(i).getDatosCliente().getRut().compareToIgnoreCase(rut) == 0) {
+                if (empresaTurismo.get(i) instanceof Cabagna) {
+                    cabagna = (Cabagna) empresaTurismo.get(i);
+                    return "El incremento al valor base es de: $" + cabagna.incrementaValorBase();
+                }
+            }
+        }
+        return "No hay un incremento al valor base.";
+
+    }
 
     public int buscarCliente(String rutCliente){
         for (int i=0; i < empresaTurismo.size(); i++){

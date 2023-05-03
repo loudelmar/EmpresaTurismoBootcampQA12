@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7fe2ee1c-b331-44fb-a702-5b4936c52777" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controlador/EmpresaTurismo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/EmpresaTurismo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/Cabagna.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/Cabagna.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/Carpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/Carpa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/DatosCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/DatosCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/Hospederia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/Hospederia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/MedioDeAlojamiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/MedioDeAlojamiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/Aplicacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/smoke_tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vista/Aplicacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/Aplicacion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,14 +36,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lourdes.lede/Documents/Curso GIT/EjemploTiendaCalzado&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Console&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/lourdes.lede/Documents/Curso GIT/EjemploTiendaCalzado",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\lourdes.lede\Documents\Curso GIT\EmpresaTurismoBootcamp12\src\vista" />

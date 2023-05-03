@@ -18,13 +18,19 @@ public class Cabagna extends Hospederia{
         this.chimenea = chimenea;
     }
 
-    //Método incrementaValorBase
+    //Métodos sobrecargados incrementaValorBase y valorACancelar
     @Override
     public int incrementaValorBase(){
         int incrementaValorBase = 0;
         if (this.getCapacidad()>5){
-            incrementaValorBase = this.getValorBaseNoche() + 18/100;
+            incrementaValorBase = this.getValorBaseNoche() * 18/100;
         }
         return incrementaValorBase;
+    }
+
+    @Override
+    public int valorACancelar() {
+        int valorACancelar = this.subtotal() - this.bonoDescuento() + this.adicional();
+        return valorACancelar;
     }
 }
